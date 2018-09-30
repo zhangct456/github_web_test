@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script>
+//			$(function(){
+//				console.log($("body").width());
+//				/*-----------------------3D旋转------------------------*/
+//				/*添加小div*/
+//				var div3d = $("#chatu_3d");
+//				for(var i = 0;i<32;i++){
+//					div3d.append("<div class='chatu_3d'><div class='chatu_3d1'></div><div class='chatu_3d2'></div></div>");
+//				}
+//				var chatuwidth = div3d.width();
+//				var chatuheight = div3d.height();
+//				$(".chatu_3d div").css("background-size","800% 400%");
+//				/*覆盖图片*/
+//				for(var i = 0;i<32;i++){
+//					var chatu_top = parseInt(i/8)*100/3;
+//					var chatu_left = (i%8)*100/7;
+////					$(".chatu_3d:eq("+i+")").children("div").css("background-position-y",chatu_top+"%");
+//					$(".chatu_3d1:eq("+i+")").css("background-position-y",chatu_top+"%");
+//					$(".chatu_3d2:eq("+i+")").css("background-position-y",chatu_top+"%");
+//					$(".chatu_3d1:eq("+i+")").css("-moz-background-position-y",chatu_top+"%");
+//					$(".chatu_3d2:eq("+i+")").css("-moz-background-position-y",chatu_top+"%");
+////					$(".chatu_3d:eq("+i+")").children("div").css("background-position-x",chatu_left+"%");
+//					$(".chatu_3d1:eq("+i+")").css("background-position-x",chatu_left+"%");
+//					$(".chatu_3d2:eq("+i+")").css("background-position-x",chatu_left+"%");
+//					$(".chatu_3d1:eq("+i+")").css("-moz-background-position-x",chatu_left+"%");
+//					$(".chatu_3d2:eq("+i+")").css("-moz-background-position-x",chatu_left+"%");
+//				}
+//				/*背景数组*/
+//				var chatuarry = [
+//					"url(img/sheji/1468282718.jpg)",
+//					"url(img/sheji/1468238182.jpg)",
+//					"url(img/sheji/banner0.jpg)",
+//					"url(img/sheji/banner1.jpg)",
+//					"url(img/sheji/banner2.jpg)"
+//				]
+//				/*切换*/
+//				var chatuindex = 0;
+//				function chatuscoll3d(){
+//					chatuindex++;
+//					chatuindex = chatuindex % chatuarry.length;
+//					$(".chatu_3d2").css("background-image",chatuarry[chatuindex]);
+//					$(".chatu_3d").css("transition-duration","0.5s");
+//					$(".chatu_3d").css("-moz-transition-duration","0.5s");
+//					$(".chatu_3d").css("-moz-transform","rotateY(180deg)");
+//					for(var i = 0;i<32;i++){
+//						var randomnum = Math.floor(Math.random()*1500);
+//						$(".chatu_3d:eq("+i+")").css("transition-delay",randomnum+"ms");
+//						$(".chatu_3d:eq("+i+")").css("-moz-transition-delay",randomnum+"ms");
+//						$(".chatu_3d:eq("+i+")").css("transform","rotateY(180deg)");
+//						$(".chatu_3d:eq("+i+")").css("-moz-transform","rotateY(180deg)");
+//					}
+//					setTimeout(function(){
+//						$(".chatu_3d").css("transition-duration","0s");
+//						$(".chatu_3d").css("-moz-transition-duration","0s");
+//						$(".chatu_3d").css("transition-delay","0ms");
+//						$(".chatu_3d").css("-moz-transition-delay","0ms");
+//						$(".chatu_3d").css("transform","rotateY(0deg)");
+//						$(".chatu_3d").css("-moz-transform","rotateY(0deg)");
+//						$(".chatu_3d1").css("background-image",chatuarry[chatuindex]);
+//					},2020);
+//				}
+//				/*创建定时器*/
+//				setInterval(chatuscoll3d,7000);
+//				/*-----------------------3D旋转------------------------*/
+////				$(".special").css("height",$(".special ul").height());
+//				/*-----------------------轮播-----------------------*/
+//				/*添加背景图*/
+//				var bannerli = $("#banners li");
+//				var bannerul = $("#banners");
+//				for(var i = 0;i<bannerli.length;i++){
+//					bannerli.eq(i).css("background-image","url(img/sheji/banner"+i+".jpg)");
+//				}
+//				/*设置定时器*/
+////				console.log(bannerli.eq(bannerli.length-1));
+//					/*定时器的一次循环*/
+//				function banneronce(direction){
+//					removecontrol();
+//					var bannerli = $("#banners li");
+//					var bannerul = $("#banners");
+//					bannerscroll(direction,bannerul,bannerli,1);
+//					setTimeout(addcontrol,1000);
+//				}
+//					/*定时器赋值*/
+//				var bannertimer ;
+//				bannertimer = setInterval(function(){banneronce("left");},3000);
+//				/*设置手动控制*/
+//				function removecontrol(){
+//					$(".banner_left").unbind("click",bannerleft);
+//					$(".banner_right").unbind("click",bannerright);
+//				}
+//				function addcontrol(){
+//					$(".banner_left").bind("click",bannerleft);
+//					$(".banner_right").bind("click",bannerright);
+//				}
+//				addcontrol();
+//				function bannerleft(){
+//					/*清除正在运行的 定时器*/
+//					clearInterval(bannertimer);
+//					/*执行一次向右移动*/
+//					var bannerli = $("#banners li");
+//					var bannerul = $("#banners");
+//					banneronce("right");
+//					/*重新添加定时器*/
+//					setTimeout(function(){
+//						clearInterval(bannertimer);
+//						bannertimer = setInterval(function(){banneronce("left")},3000);
+//					},3000);
+//				}
+//				function bannerright(){
+//					clearInterval(bannertimer);
+//					var bannerli = $("#banners li");
+//					var bannerul = $("#banners");
+//					banneronce("left");
+//					setTimeout(function(){
+//						clearInterval(bannertimer);
+//						bannertimer = setInterval(function(){banneronce("left")},3000);
+//					},3000);
+//				}
+//				/*滑动函数*/
+//				function bannerscroll(direction,bannerul,bannerli,time){
+////					var i = Math.floor(Number($(".banner1").css("left").replace("px",""))/$(".banner").width());
+//					var divs = $(".banner1 li div");
+//					divs.css("line-height","100px");
+//					if(direction == "left"){
+//						var i = -2;
+//						bannerul.css("transition-duration",time+"s");
+//						bannerul.css("left",i*100+"%");
+//						setTimeout(function(){
+//							var firstbanner = bannerli.eq(0);
+//							firstbanner.clone(true).appendTo(bannerul);
+//							firstbanner.remove();							
+//							bannerul.css("transition-duration","0s");
+//							bannerul.css("left","-100%");
+//							divs.css("line-height","50px");
+//						},time*1001);
+//					}
+//					else if(direction == "right"){
+//						var i = 0;
+//						bannerul.css("transition-duration",time+"s");
+//						bannerul.css("left",i*100+"%");
+//						setTimeout(function(){
+//							var lastbanner = bannerli.eq(bannerli.length-1);
+//							lastbanner.clone(true).prependTo(bannerul);
+//							lastbanner.remove();
+//							bannerul.css("transition-duration","0s");
+//							bannerul.css("left","-100%");
+//							divs.css("line-height","50px");
+//						},time*1000);
+//					}
+//					
+//				}
+//				/*-----------------------轮播-----------------------*/
+//				/*-----------------------导航栏----------------------*/
+//				$(".top_nav_icon").toggle(function(){
+//					$(".top_navs").slideDown("normal");
+//					$(this).css("background-image","url(img/icon/cuohao.png)");
+//				},function(){
+//					$(".top_navs").slideUp("normal");
+//					$(this).css("background-image","url(img/icon/caidan.png)");
+//				});
+//				$(".top_navs li").hover(function(){
+//					$(this).children("ul").slideDown("normal");
+//				},function(){
+//					$(this).children("ul").slideUp("normal");
+//				});
+//				/*-----------------------导航栏-----------------------*/
+//				/*----------------------进度条监听---------------------*/
+//				var top = 0 ;
+//				var ptop = 0;
+//				$(".intr ul").css("top",$(".intr").height());
+//				$(".special ul").css("top",-$(".intr").height()+"px");
+////				console.log(Math.max($(".special ul li:eq(1)").height(),$(".special ul li:eq(2)").height()));
+////				console.log($(".special ul li:eq(1)").height());
+////				console.log($(".special ul li:eq(2)").height());
+//				window.onscroll = function(){
+//					ptop = document.documentElement.scrollTop || document.body.scrollTop;
+//					var bannerheight = $(".banner1").height();
+//					var bottom = ptop + $("body").height();
+////					console.log(top);
+////					console.log(t);
+//					/*简介部分动画*/
+//					if(bottom>bannerheight){
+//						$(".intr ul").css("top","0");
+//					}
+//					/*具体内容部分*/
+//					if(bottom>bannerheight){
+//						$(".special ul").css("top","0");
+//						$(".special ul").css("opacity","1.0");
+//					}
+//					/*导航部分*/
+////					if(ptop>bannerheight){
+////						/*控制导航栏*/
+////						$(".top").css("position","fixed");
+////						if(ptop>bannerheight){
+////							if(top>ptop){
+////								$(".top").slideDown("normal");
+////							}
+////							else{
+////								$(".top").slideUp("normal");
+////							}
+////						}
+////					}
+////					else{
+////						$(".top").css("position","absolute");
+////					}
+////					setTimeout(function(){top = ptop},0);
+//					if(ptop>bannerheight){
+//						/*控制导航栏*/
+//						$(".top").css("top",ptop);
+//						if(ptop>bannerheight){
+//							if(top>ptop){
+//								$(".top").slideDown("normal");
+//							}
+//							else{
+//								$(".top").slideUp("normal");
+//							}
+//						}
+//					}
+//					else{
+//						$(".top").css("top","0");
+//					}
+//					setTimeout(function(){top = ptop},0);
+//					/*案例部分*/
+//					var casetop = $(".cases").offset().top;
+//					if(bottom>casetop){
+//						$(".cases li").css("margin-left","0");
+//					}
+//					/*底部*/
+//					var bottomtop = $(".bottom").offset().top;
+//					if(bottom>bottomtop){
+//						$(".bottom_ul").css("margin-top","0");
+//					}
+//					/*视频控制*/
+//					var videotop = $("video").offset().top;
+//					if(bottom>videotop){
+//						$("video").get(0).play();
+//					}
+//					
+//				}
+//				/*----------------------进度条监听---------------------*/
+//				/*----------------------案例淡入淡出---------------------*/
+//				$(".cases ul li").hover(function(){
+//					$(this).css("transition","0.5s ease");
+//					$(this).css("background-size","140% 140%");
+//					$(this).children("p").fadeIn("fast");
+//				},function(){
+//					$(this).css("transition","0.5s ease");
+//					$(this).css("background-size","100% 100%");
+//					$(this).children("p").fadeOut("fast");
+//				});
+//				/*----------------------案例淡入淡出---------------------*/
+//				/*----------------------控制高度变化-----------------------*/
+//				window.onresize = function(){
+////					$(".special ul li").css("height",Math.max($(".special ul li:eq(1)").height(),$(".special ul li:eq(2)").height())+100+"px");
+////					$(".special").css("height",$(".special ul").height());
+//					if($("body").width()>850)
+//						$(".top_navs").show();
+//					else
+//						$(".top_navs").hide();
+//					var chatuwidth = div3d.width();
+//					var chatuheight = div3d.height();
+//					$(".chatu_3d div").css("background-size","800% 400%");
+//				}
+//				/*----------------------控制高度变化-----------------------*/
+//			});
+		</script>
+	</head>
+	<style>
+		
+	</style>
+	<body>
+		<div class="top">
+			<div class="top_nav_icon">
+				
+			</div>
+			<img src="img/sheji/1467997051.png" />
+			<div class="top_clear"></div>
+			<ul class="top_navs">
+				<li class="top_nav_phone">
+					<p>
+						<span>4000-123-456</span>
+					</p>
+				</li>
+				<li class="top_nav">
+					<p>首页</p>
+				</li>
+				<li class="top_nav">
+					<p>关于 ▼</p>
+					<ul>
+						<li>关于我们</li>
+						<li>公司荣誉</li>
+						<li>设计团队</li>
+						<li>服务流程</li>
+					</ul>
+				</li>
+				<li class="top_nav">
+					<p>产品 ▼</p>
+					<ul>
+						<li>建材</li>
+						<li>家具</li>
+						<li>软装</li>
+						<li>家电</li>
+					</ul>
+				</li>
+				<li class="top_nav">
+					<p>案例 ▼</p>
+					<ul>
+						<li>客厅设计</li>
+						<li>卧室设计</li>
+						<li>厨房设计</li>
+					</ul>
+				</li>
+				<li class="top_nav">
+					<p>资讯 ▼</p>
+					<ul>
+						<li>装修搭配</li>
+						<li>软装改造</li>
+					</ul>
+				</li>
+				<li class="top_nav">
+					<p>联系</p>
+				</li>
+			</ul>
+		</div>
+		<div class="banner">
+			<ul id="banners" class="banner1">
+				<li>
+					<div class="banners_d1">
+						<span class="banner_t1">四季如一舒心享</span>
+						<br />
+						<span class="banner_t2">温湿平衡改变生活</span>
+					</div>
+				</li>
+				<li>
+					<div class="banners_d2">
+						<span class="banner_t1">为您打造最舒心的家居生活！</span>
+						<br />
+						<span class="banner_t2">家居设计，舒心生活</span>
+					</div>
+				</li>
+				<li>
+					<div class="banners_d3">
+						<span class="banner_t1">室内设计郭大师复古设计</span>
+						<br />
+						<span class="banner_t2">家就是艺术馆</span>
+					</div>
+				</li>
+			</ul>
+			<div class="banner_left"></div>
+			<div class="banner_right"></div>
+		</div>
+		<div class="intr">
+			<ul>
+				<li>
+					<div>
+							
+					</div>
+					<h2>关于我们</h2>
+					<p>
+						室内设计（香港）有限公司作为一家致力于 商业办公、酒店会所、别墅私宅、陶瓷 展厅空间的专业设计机构。
+					</p>
+				</li>
+				<li>
+					<div>
+							
+					</div>
+					<h2>公司荣誉</h2>
+					<p>
+						2016中国建筑装饰设计大奖最佳酒店设计 2015中国建筑学会室内设计分会会员 2014中国室内装饰协会会员
+					</p>
+				</li>
+				<li>
+					<div>
+							
+					</div>
+					<h2>设计团队</h2>
+					<p>
+						团队主创设计来自亚洲顶级室内设计公司， 有着丰富的室内设计创意及设计理念， 荣获多项国内外设计大奖。
+					</p>
+				</li>
+				<li>
+					<div>
+							
+					</div>
+					<h2>服务流程</h2>
+					<p>
+						团队主创设计来自亚洲顶级室内设计公司， 有着丰富的室内设计创意及设计理念， 荣获多项国内外设计大奖。
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div class="special">
+			<ul>
+				<li id="chatu_3d" class="chatu">
+				</li>
+				<li class="wenzi">
+					<h1>关于我们</h1>
+					<p>
+						室内设计有限公司是中国建筑装饰协会会员单位，揭阳市建筑装饰行业协会家装委员会副主任单位，是首批取得广州家庭装饰装修企业资格证的单位之一。"做品味装饰，创名牌企业"，正以饱满的热情和自信一路前行！
+					</p>
+					<p>
+						其“品味装饰”商标具有较高的知名度，深受消费者的喜爱与信任。公司成立于1998年，已经成为中国室内装饰行业领军品牌，专业从事家居、商铺、酒店等设计与施工。在2014年10月15日，公司获得广州市工商行政管理局的审批，升格为集团企业，并正式设立广东室内装饰集团。目前已建立了完整的设计、施工、材料以及客户服务系统，取得了建设部门颁发的设计专项乙级，施工专项贰级资质,通过了ISO9001国际质量体系认证，2016年被评定为广东省著名商标。
+					</p>
+					<div>
+						更多介绍
+					</div>
+				</li>
+				<li class="wenzi">
+					<h1>设计团队</h1>
+					<p>
+						室内设计精英团队主创设计来自亚洲顶级室内设计公司，荣获多项国内外设计大奖，是一批具有强烈的创作欲望、善于思考、不断进取的设计师精英。
+					</p>
+					<p>
+						团队有着丰富的室内设计创意及设计理念，更是有着多年的别墅豪宅、商业空间设计经验，且均来自美术学院、美工学院、美术大学等专业设计院校背景，更是有着国际化的视野及敏锐的时尚触觉，他们崇尚以设计为核心，设计创造价值，提出“无创意”“不设计”的设计理念服务每个客户。
+					</p>
+					<div>
+						更多介绍
+					</div>
+				</li>
+				<li class="chatu">
+					
+				</li>
+			</ul>
+		</div>
+		<div class="cases">
+			<h1>装修案例</h1>
+			<ul>
+				<li>
+					<p>完美室内设计作品</p>
+				</li>
+				<li>
+					<p>二室二厅客厅装修效果图</p>
+				</li>
+				<div class="cases_clear"></div>
+				<li>
+					<p>现代简约风格图赏</p>
+				</li>
+				<li>
+					<p>混搭风格白领公寓</p>
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+		</div>
+		<div class="vid">
+			<h1>宣传视频</h1>
+			<video src="src/video.mp4" controls="controls" loop="loop"></video>
+		</div>
+		<div class="soft">
+			<h1>软装搭配</h1>
+			<ul>
+				<li>
+					<img src="img/sheji/thumb4.jpg" />
+					<h3>宅在“云端”里 简约却不简单的文艺美宅</h3>
+					<p>2016-07-19</p>
+					<p>
+						木色为主的家具将大开间包裹成典型的日式风格。由于空间的长条形状，一切软装看似简单而信手拈来，实则藏着Tin
+					</p>
+				</li>
+				<li>
+					<img src="img/sheji/thumb5.jpg" />
+					<h3>让家春暖花开 美丽姑娘的优雅出租屋</h3>
+					<p>2016-07-19</p>
+					<p>
+						两层楼共六十多平，加上三十多平的天台，沉静租下这个房子才花了1600!尽管房子最初的模样惨不忍睹，但绿意满..
+					</p>
+				</li>
+				<li>
+					<img src="img/sheji/thumb6.jpg" />
+					<h3>走在潮流顶端 小建材打造现代时尚家装</h3>
+					<p>2016-07-19</p>
+					<p>
+						各种各样的家装风格哪个才是时尚的你的最爱呢?走在潮流的尖端，把现代时尚的元素融入家居，一款细小的面板也能很
+					</p>
+				</li>
+				<li>
+					<img src="img/sheji/thumb7.jpg" />
+					<h3>绿植装扮出美妙家 摄影师的创意空间</h3>
+					<p>2016-07-19</p>
+					<p>
+						一个摄影师知道，客厅之后藏着的是整个生活。经由客厅，她能够碰触并捕捉着关于生活的真谛。动线流畅的大开间
+					</p>
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+		</div>
+		<div class="bottom">
+			<ul class="bottom_ul">
+				<li class="bottom_li1">
+					<h2>关于我们</h2>
+					<p>
+						Android on Chrome OS支持ARM跟x86架构的CPU，但是这用处也不大。毕竟移动设备用的几乎都是ARM的，很多安卓应用已经为ARM平台做了优化理能要求
+					</p>
+					<div class="bottom_about">
+						<div>
+							<img src="img/icon/erweima.png" />
+						</div>
+						<div>
+							<img src="img/icon/erweima.png" />
+						</div>
+						<div>
+							<img src="img/icon/erweima.png" />
+						</div>
+					</div>
+				</li>
+				<li class="bottom_li2">
+					<h2>联系我们</h2>
+					<ul>
+						<li>
+							<div></div>广东揭阳人民政府左侧酒店五楼M1156间
+						</li>
+						<li>
+							<div></div>4000-123-456
+						</li>
+						<li>
+							<div></div>writeyouremail@domain.com
+						</li>
+						<li>
+							<div></div>+86-0663-8654321
+						</li>
+						<li>
+							<div></div>立即留言
+						</li>
+					</ul>
+				</li>
+				<li class="bottom_li3">
+					<h2>新闻咨询</h2>
+					<ul>
+						<li>
+							<img src="img/sheji/thumb8.jpg" />
+							老房子换新装 100平摩登复式家装攻略
+							<br />
+							2016-07-19
+						</li>
+						<li>
+							<img src="img/sheji/thumb9.jpg" />
+							打造蓝调时尚 180平现代公寓家装日记
+							<br />
+							2016-07-19
+						</li>
+						<li>
+							<img src="img/sheji/thumb10.jpg" />
+							送宝宝舒适健康家 80后父母晒家装日记
+							<br />
+							2016-07-19
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+		</div>
+		<div class="foot">
+			友情链接 : 室内设计师 揭阳室内设计联盟 中国家居装修协会
+			<br />
+			家居公司 | 室内设计公司 版权所有2008-2016 湘ICP备8888888 （本页面内容为网站演示数据，前台页面内容都可以在后台修改。）
+			<br />
+			Powered by MetInfo 5.3.12
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</body>
+</html>

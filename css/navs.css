@@ -1,0 +1,27 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+body{background-color: deepskyblue;}
+.top{width: 100%;height: 60px;background-color: white;}
+.top img{float: left;width: 100px;height: 45px;margin: 7.5px 0;margin-left: 50px;}
+.top ul{list-style: none;float: right;width: 500px;height: 60px;}
+.top ul li{float: left;line-height: 60px;font-size: 20px;padding: 0 30px;color: #666666;}
+.con{width: 90%;margin: 0 auto;}
+.con ul{list-style: none;margin-top: 30px;}
+.con ul li{position: relative;float: left;width: 45%;height: 300px;margin: 20px 2.5%;border: 10px solid gainsboro;transition: all 8s ease;}
+.con ul li .shouji{position: absolute;width: 25%;height: 260px;right: 0;bottom: 0;background: url(../img/navs/mobile-bg1.png);background-size: 100% 100%;}
+.con ul li .shoujipingm{width: 96%;height: 210px;margin: 0 auto;margin-top: 25px;transition: all 12s ease;}
+.con ul li:nth-child(1){background: url(../img/navs/canvas.png);background-size: 100%;background-position-y: 0;}
+.con ul li:nth-child(1):hover{background-position-y: 100%;}
+.con ul li:nth-child(1) .shoujipingm{background: url(../img/navs/canvasfdsfdsf.png);background-size: 100%;background-position-y: 0;}
+.con ul li:nth-child(1) .shoujipingm:hover{background-position-y: 100%;}
+.con ul li:nth-child(2){background: url(../img/navs/lixinxing2.png);background-size: 100%;background-position-y: 0;}
+.con ul li:nth-child(2):hover{background-position-y: 100%;}
+.con ul li:nth-child(2) .shoujipingm{background: url(../img/navs/lixinxing.png.png);background-size: 100%;background-position-y: 0;}
+.con ul li:nth-child(2) .shoujipingm:hover{background-position-y: 100%;}
+.con ul li:nth-child(3){background: url(../img/navs/guozhenhua1.png);background-size: 100%;background-position-y: 0;}
+.con ul li:nth-child(3):hover{background-position-y: 100%;}
+.con ul li:nth-child(3) .shoujipingm{background: url(../img/navs/guozhenhua.jpg);background-size: 100%;background-position-y: 0;transition: all 2s ease;}
+.con ul li:nth-child(3) .shoujipingm:hover{transition: all 2s ease;background-position-y: 100%;}
+.con ul li:nth-child(4){background: url(../img/navs/liuwang.png);background-size: 100%;background-position-y: 0;}
+.con ul li:nth-child(4):hover{background-position-y: 100%;}
+.con ul li:nth-child(4) .shoujipingm{background: url(../img/navs/liuwang2.png);background-size: 100%;background-position-y: 0;transition: all 2s ease;}
+.con ul li:nth-child(4) .shoujipingm:hover{transition: all 2s ease;background-position-y: 100%;}

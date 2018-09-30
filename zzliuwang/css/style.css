@@ -1,0 +1,365 @@
+/*--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+/*-- Reset Code --*/
+body {
+	padding: 0;
+	margin: 0;
+	background: #FFF;
+	font-family: 'Rambla', sans-serif;
+}
+body a {
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	text-decoration: none;
+}
+body a:hover {
+	text-decoration: none;
+}
+body a:focus, a:hover {
+	text-decoration: none;
+}
+input[type="button"], input[type="submit"] {
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Federo', sans-serif;
+	letter-spacing:1px;
+}
+p {
+	margin:0;
+}
+ul {
+	margin:0;
+	padding:0;
+}
+label {
+	margin:0;
+}
+a:focus, a:hover {
+	text-decoration: none;
+	outline: none
+}
+img {
+	width: 100%;
+}
+/*-- //Reset Code --*/
+
+
+
+
+/*--banner strat here--*/
+.header{
+	 padding:10px 0px;
+}
+
+.logo {
+    float: left;
+}
+.logo a h1{
+	font-size:50px;
+	color:#fff;
+}
+.menu{
+	float:right;
+}
+@media screen and (min-width: 850px) {
+.banner {
+    background: url('../images/ab.jpg');
+    background-size: cover;
+    min-height: 800px;
+}
+
+.content {
+    background: url(../images/dott.png)repeat 0px 0px;
+	min-height:800px;
+}
+}@media screen and (max-width: 850px) and (min-width: 500px) {
+.banner {
+    background: url('../images/e2.jpg');
+    background-size: cover;
+   height: 50%;
+}
+
+.content {
+    background: url(../images/dott.png)repeat 0px 0px;
+	min-height:400px;
+}
+}
+@media screen and (max-width: 500px){
+	.banner {
+    background: url('../images/5.jpg');
+    background-size: cover;
+   height: 50%;
+}
+
+.content {
+    background: url(../images/dott.png)repeat 0px 0px;
+	min-height:400px;
+}
+}
+/* Pop */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+/*--who we are start here--*/
+.who-we-are {
+    padding: 5em 0em ;
+}
+.who-we-images {
+    width: 90%;
+    margin: 0 auto;
+}
+.who-we-left {
+    width: 48%;
+    float: left;
+}
+.who-we-img1{
+    border:3px solid #B0B0B0;
+    padding: 1.1em;
+}
+.who-we-img1:hover{
+    border:3px solid rgba(92, 83, 169, 0.83);
+}
+.who-we-right {
+    float: right;
+    width: 48%;
+}
+.who-we-are-main h2 {
+    font-size: 2.5em;
+    color:#5c53a9;
+    text-align: center;
+    margin-bottom: 1.5em;
+
+}
+.who-we-are-main h3 {
+    font-size: 1.5em;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 5px;
+    margin: 2.5em 0em 0.5em 0em;
+}
+.who-we-are-main p {
+    font-size: 1em;
+    color:#5F5E5E;
+    line-height: 1.9em;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+a.mask {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+}
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+img.zoom-img:hover {
+  -webkit-transform: scale(1.15);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 750ms;
+  -moz-transform: scale(1.15);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 750ms;
+  overflow: hidden;
+}
+/*--who we are end her--*/
+/*--offer start here--*/
+.offer {
+    background: url(../images/bann3.jpg)no-repeat fixed;
+    min-height: 590px;
+    padding:6em 0em;
+    background-size: cover;
+}
+@media screen and (min-width: 800px){
+	.offer-main h3 {
+    font-size: 3em;
+    color: #5c53a9;
+    text-align: center;
+}
+.offer-grid-block {
+    margin-top: 5em;
+}
+.offer-grid {
+	width: 33%;
+	float: left;
+    text-align: center;
+}
+.offer-grid h4 {
+    font-size: 1.3em;
+    color: #fff;
+    margin: 2em 0em 1em 0;
+}
+.offer-grid p {
+    font-size: 1em;
+     color: #b0b0b0;
+    line-height: 1.8em;
+    width: 30%;
+    margin: 0 auto;
+}
+.offer-grid img {
+    padding: 1em;
+    border: 0.5px solid #fff;
+    border-radius: 5px;
+	width:80%;
+}
+	
+}
+@media screen and (max-width: 800px){
+	
+
+.offer-main h3 {
+    font-size: 3em;
+    color: #5c53a9;
+    text-align: center;
+}
+.offer-grid-block {
+    margin-top: 5em;
+}
+.offer-grid {
+    text-align: center;
+}
+.offer-grid h4 {
+    font-size: 1.3em;
+    color: #fff;
+    margin: 2em 0em 1em 0;
+}
+.offer-grid p {
+    font-size: 1em;
+     color: #b0b0b0;
+    line-height: 1.8em;
+    width: 80%;
+    margin: 0 auto;
+}
+.offer-grid img {
+    padding: 1em;
+    border: 0.5px solid #fff;
+    border-radius: 5px;
+	width:35%;
+}
+}
+/*--offer end here--*/
+/*--why us start here--*/
+.why-us {
+	text-align: center;
+    padding: 2em 0em;
+}
+.why-us-main h3 {
+    font-size: 3em;
+    color: #5c53a9;
+    text-align: center;
+    margin-bottom: 1.1em;
+
+}
+.why-us-block h4 {
+    font-size: 1.3em;
+    color: #000;
+    text-align: center;
+    margin-top: 1em;
+    letter-spacing: 5px;
+}
+.why-us-block p {
+    font-size: 1em;
+    color:#5F5E5E;
+    line-height: 1.8em;
+    text-align: center;
+    margin-top: 0.5em;
+}
+.why-us-block {
+	
+    float: left;
+    width: 31%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+.why-us-block.no-mar {
+    margin-right: 0px;
+}
+
+.why-us-img1{
+	width: 80%;
+    border:3px solid #B0B0B0;
+    padding: 1.1em;
+}
+
+.why-us-img1:hover{
+    border:3px solid rgba(246, 52, 77, 0.59);
+}
+/*--*/
+/*--why us end here--*/
+/*--footer start here--*/
+.footer {
+	clear: both;
+	height: 2em;
+    background: #2D2D2D;
+    padding: 0.5em 0em;
+}
+
+
+.copy p {
+    font-size: 1em;
+    color: #fff;
+}
+.copy p a{
+	color: #fff;
+}
+.copy p a:hover{
+	text-decoration:underline;
+}
+.copy {
+    text-align: center;
+    margin-top: 0.5em;
+}
