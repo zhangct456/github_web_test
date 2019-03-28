@@ -122,8 +122,10 @@
 		.vid{width: 100%;background-color: #eaeaea;padding-bottom: 50px;}
 		.vid h1{color: #808080;text-align: center;line-height: 150px;height: 150px;width: 100%;}
 		.vid video{width: 80%;margin: 0 auto;display: block;}
+		.vid img{width: 80%;margin: 0 auto;display: block;}
 		@media screen and (max-width: 700px) {
 			.vid video{width: 100%;}
+			.vid img{width: 100%;}
 		}
 /**/
 /*软装搭配*/
